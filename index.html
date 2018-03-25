@@ -1,0 +1,251 @@
+<?php 
+$con=mysqli_connect("localhost","root","","cardsharper",)
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Homepage</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body style="padding-top: 50px;" >
+        <!-- Header Section-->
+       <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MyNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand " href="#Website"><b>Cardsharpers</b></a>
+                    </div>
+                    <div class=" navbar-collapse collapse  " id="MyNavbar">
+                    <ul class="nav navbar-nav navbar-right" style="font-size: 15px;">
+                        <li><a href="#myModal" data-toggle="modal"><span class="glyphicon glyphicon-log-in"> <b>Login</b></span></a></li>
+                        <li><a href="#myModals" data-toggle="modal"><span class="glyphicon glyphicon-user"> <b>SignUp</b></span></a> </li>
+                    </ul>
+</div>
+                </div>
+            </nav>
+               <!-- Login -->
+           <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style="color:red;"><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <p>Not a member?  <a href="#myModals" data-toggle="modal" class="close" data-dismiss="modal">  Sign Up</a></p>
+          <p >Forgot <a href="#">Password?</a></p>
+        </div>
+      </div>
+    </div>
+  </div> 
+            <!-- Login Ends-->
+    <!-- Sign Up -->         
+    <div class="modal fade" id="myModals" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style="color:red;"><span class="glyphicon glyphicon-lock"></span> SignUp</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+             <div class="form-group">
+              <label for="name"><span class="glyphicon glyphicon-user"></span> Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter Name">
+            </div>
+              <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-envelope"></span> Email</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+               <div class="form-group">
+              <label for="cn"><span class="glyphicon glyphicon-phone"></span> Contact</label>
+              <input type="text" class="form-control" id="cn" placeholder="Enter Contact Number">
+            </div>
+                       <button type="submit" class="btn btn-default btn-success btn-block"> Submit</button>
+          </form>
+        </div>
+           </div>
+    </div>
+  </div> 
+    <!-- Sign Up Ends-->
+<!-- Header Section Comes to End Here-->
+       <!-- Banner Content-->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel" class="c">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" >
+    <div class="item active">
+      <img src="img/c2.jpg" alt="Cardsharpers">
+      <div class="carousel-caption">
+    <h4><b>Life is like a game of cards. The hand you are dealt is determinism, the way you play it is free will.</b></h4>
+      </div>
+    </div>
+
+    <div class="item">
+        <img src="img/d6.jpeg" alt="Cardsharpers">
+        <div class="carousel-caption">
+            <h4><b>Men are like a deck of cards. You will find the occasional king, but most are jacks.</b></h4>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="img/d10.jpg" alt="Cardsharpers" ">
+      <div class="carousel-caption">
+          <h4><b>Holding aces does not ensure a win. Right moves do.</b></h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  <!-- End Of Banner Content--->
+  <br/><br/>
+  <div class="container" style="padding-left: 40px; padding-right: 40px;">
+      <center>
+          <h2 style="font-size: 35px;"><b>INDIAN SEEP GAME</b></h2>
+      </center>
+          <br/>
+      <p style="font-size: 20px;">Seep, also known as Sip, Sweep or occasionally Siv or Shiv is a fishing game related to Casino. The first part of this page describes a version of Seep played in northern India, in which the total value of the cards is 100 points. Another, possibly older version, in which the total card vale is 30 points, is played in the Punjab, where the game is very popular, both in India and in Pakistan.
+
+          <br><b>Players and Cards</b><br>
+Seep is normally played by four people in fixed partnerships of two with partners sitting opposite one another. The deal and play are counter-clockwise. A 2 player variation also exists but is less common.
+
+A standard English pattern 52-card pack (without jokers) is used.
+
+<br><b>Objective and scores</b><br>
+The aim of the game is to capture cards worth points from a layout on the table (also known as the floor). The game ends when one team has accumulated a lead of at least 100 points over the other team (this is called a baazi). Players can decide in advance how many games (baazis) they want to play.
+
+The method of capture is to play a card from one's hand and to pick up with it one or more cards or groups of cards from the table that have a capture value equal to the played card. For the purposes of capture, aces have a capture value of 1, cards from 2 to 10 are face value, a jack has capture value 11, queen 12 and king 13. During the game it is possible to build sets of cards into piles called houses, which can then only be captured as a unit. Cards on the floor that are not part of a house are called loose cards.
+
+At the end of the play the scoring value of the captured cards is counted:</p>
+      <ul style="font-size: 20px;">
+          <li>All cards of the Spade suit have point values corresponding to their capture value (from the king, worth 13, down to the ace, worth 1)</li>
+          <li> The aces of the other three suits are also worth 1 point each</li>
+          <li> The ten of diamonds is worth 6 points</li>
+      </ul>
+<p style="font-size: 20px;">Only these 17 cards have a scoring value - all other captured cards are worthless. The total scoring value of all the cards in the pack is 100 points.
+
+Players can also score for a sweep, which occurs when a player captures all the cards from the layout, leaving the table empty. Normally a sweep is worth 50 points, but a sweep made on the very first play is worth only 25 points, and a sweep made on the last play is worth no points at all.</p>
+<div> 
+    <center> <button type="button" class="btn btn-danger"><a href="#mymodalss" data-toggle="modal">RULES</a></button></center>
+      <div class="modal fade" id="mymodalss" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style="color:red;"><span class="glyphicon glyphicon-lock"></span> Rules</h4>
+        </div>
+        <div class="modal-body">
+            <h4>Rules of Card Game: Seep or Sweep</h4>
+            <p>Picking a Sweep. Besides earning the cards with points, a player can also earn bonus points by picking a sweep (or seep). A sweep is worth 50 points except the sweep picked on start of the play is worth 25 points and a sweep at the end of the play is worth nil points. At the end of the game, the points collected by each player are counted.
+
+
+In the game, each player in turn plays one card from the cards in his/her hand. A player has following choices to play his card to:
+
+*Construct a house (ghar),
+*Break the house,
+*Make a Pukka (unbreakable) house,
+*Pick up one or more cards,
+*Throw a loose card,
+*Pick up a house.
+
+House (ghar). A house is a pile of two or more cards on the floor. The smallest house has a capture value of 9 and the biggest house is 13 (king). A player can create a house only if he/she has a card equal to the capture value of the house. For example, to create a house of 11, you must have a 11 (jack) in your hand. Also, a house of 11 can be picked only by a 11 (jack). Also, at a time only one unique value house can exist at a time. A house formed by a player can also be picked by the opponent player or opponent team.
+
+The new house you make is not a “pukka” (cemented or unbreakable) house, except a house of 13 or a pukka house. A house that is not “pukka” can be broken or modified. For example, if there is a breakable or uncemented house of 9 on the floor, a next player can add a card of 1, 2, 3 or 4 to make it a house of 10, 11, 12 or 13. For this the player must have a card of the capture value of the house so created.
+
+
+Pukka (cemented or unbreakable) House. On a breakable house of 9 to 12 if you add another card or cards with sum equal to the capture value of the house, you have an unbreakable house. For example, on a house of 11, if you put a jack or two or more cards with sum equal to 11, you have an unbreakable house. Such a house cannot be broken. The unbreakable house of 11 cannot be converted into a house of 12 or 13.
+
+Sweep Bajji
+In a normal sweep game, players play one game at a time. After the completion of the game, winner is decided.
+
+In the other form of the game, there is a concept of Baazi - that is, you continue playing the opponent until the difference is 100 points or more. Only when the difference is 100 points or more, then the winner is declared.</p>
+            <h5>How Sweep is played (Two Players Mode)?</h5>
+<p>Take the 52-card pack without jokers. For the very first game, decide who will be the dealer.
+
+
+The bid number. The dealer after shuffle and cut gives four cards to the opponent player and places four cards with face down on the floor. After viewing the cards, the opponent must announce a bid number from 9 to 13 based on his/her four cards. If the opponent does not have any card bigger than 8, he/she returns the cards. The pack of cards is reshuffled and cut and the deal is repeated. After the successful bid, the four cards on floor are turned face up; these four cards become the loose cards. Now the bidder plays a card.
+
+
+The bidder has following choices: *create a house of bid value by adding one of his cards to one or more cards on the table, *plays the bid card to pocket one or more cards of value equal to the bid value, or *throws a card of bid value on the floor as a loose card. A card can only be thrown as a loose card if this card cannot pocket any other loose card or cards.
+
+After the first card is played by the bidder, the dealer completes the deal so that he/she gets a total of 12 cards and the opponent gets another 8 cards. The cards are dealt in a group of four.
+
+Now it is the next player’s (dealer) turn to play a card to construct a new house, to add the card to an existing house, pocket a house or cards or throw a loose card. Each player in turn plays one card.
+When each player has played 12 cards, the dealer deals again, in a group of four, so that all the cards are dealt. Thus, both players get another 12 cards each. The game continues till both the players have played all the cards in their hands. Any loose card or cards remaining on the floor are picked by the player who last picked cards or house from the floor. Now the players count their points (only 13 cards have point values) and add 50 points for each sweep.</p>
+        </div>
+           </div>
+    </div>
+  </div> 
+</div>   
+      
+  </div>
+  <br/><br/>
+  <!-- Footer -->
+  <div class="container-fluid"style="background-color: black;color: white;">
+      <div class="container">
+          <div style="float: left;">
+          <p style="font-size: 20px;"><b>CONTRIBUTORS</b></p>
+          <p>Nageen Chand</p>
+          <p>Nitin Dogra</p>
+          <p>Aniket Sharma</p>
+          <p>Sumit Daroch</p>
+          <p>Shreyash Indurkar</p>
+
+         </div>
+          <div style="float: left;">
+              <img src="img/e2.jpg" alt="Cardsharpers" class="img-responsive" style="width: 300px; height: 200px;"
+          </div>
+           </div>
+    
+  </div>
+  
+    </div>
+    <!-- Footer Ends-->
+    </body>
+</html>
