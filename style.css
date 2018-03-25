@@ -6,3 +6,6 @@ html {
 .carousel-inner{
     height: 300px;
 }
+a{
+  text-decoration: none;  
+}
